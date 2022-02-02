@@ -1,12 +1,19 @@
-const character = "mario";
+let character = "mario";
 
-console.log(character);
+let age = 30;
 
-const inputs = document.querySelectorAll("input");
-console.log(inputs);
+let isBlackBelt = false; //
 
-console.log(inputs);
+// character = 20
+character = "luigi";
 
-inputs.forEach((input) => {
-	console.log(input);
-});
+// age = "yoshi";
+age = 40;
+
+// isBlackBelt = "yes";
+isBlackBelt = true;
+
+// const circ = (d) => d * Math.PI;
+// console.log(circ("hello"));
+const circ = (d: number) => d * Math.PI;
+console.log(circ(10)); //typecheck
