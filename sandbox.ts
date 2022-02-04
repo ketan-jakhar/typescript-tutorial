@@ -1,19 +1,47 @@
-let character = "mario";
+//arrays
+let names = ["luigi", "mario", "yoshi"];
 
-let age = 30;
+// names.push("toad");
+// names.push(3);
+// names[0] = 3;
 
-let isBlackBelt = false; //
+let numbers = [10, 20, 30, 40];
+numbers.push(50);
+// numbers.push("zee");
+// number[1] = "zee";
 
-// character = 20
-character = "luigi";
+let mixed = ["ken", 4, "tory", 5, 6];
 
-// age = "yoshi";
-age = 40;
+mixed.push("ray");
+mixed.push(10);
+mixed[0] = 3;
 
-// isBlackBelt = "yes";
-isBlackBelt = true;
+// objects
+let ninja = {
+	name: "mario", //has to be string always now
+	belt: "black", //has to be string always now
+	age: 25, //has to be number always now
+};
 
-// const circ = (d) => d * Math.PI;
-// console.log(circ("hello"));
-const circ = (d: number) => d * Math.PI;
-console.log(circ(10)); //typecheck
+ninja.name = "luigi";
+// ninja.name = 25;
+ninja.belt = "green";
+// ninja.belt = 15;
+ninja.age = 26;
+// ninja.age = "25";
+
+// -----------
+
+// ninja = {
+//     name: "yoshi";
+//     belt: "orange",
+// }
+
+// ninja = {
+//     name: "yoshi";
+//     belt: "orange",
+//     age: 25,
+//     style: [],
+// }
+
+// cant do the above as the initial structure needs to be the same
