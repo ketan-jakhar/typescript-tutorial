@@ -42,8 +42,10 @@ console.log(circ(10));
 
 ## Arrays and Objects
 
+### Arrays
+
 ```
-// Arrays
+
 let names = ["luigi", "mario", "yoshi"];
 
 // names.push("toad");
@@ -60,8 +62,11 @@ let mixed = ["ken", 4, "tory", 5, 6];
 mixed.push("ray");
 mixed.push(10);
 mixed[0] = 3;
+```
 
-// Objects
+### Objects
+
+```
 let ninja = {
 	name: "mario", //has to be string always now
 	belt: "black", //has to be string always now
@@ -91,4 +96,69 @@ ninja.age = 26;
 
 // cant do the above as the initial structure needs to be the same
 
+```
+
+## Explicit Types
+
+```
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+// age = "luigi";
+age = 30;
+
+// isLoggedIn = 25;
+isLoggedIn = false;
+```
+
+### Arrays
+
+```
+let ninjas: string[];
+// ninjas.push('luigi'); // Cant do this as we haven't initialized it yet with an empty array
+
+// To push an item in it we need to create a new empty array as
+let ninjaArr: string[] = [];
+ninjaArr.push("mario");
+// ninjaArr.push(true);
+```
+
+### Union Types
+
+```
+let mixed: (string | number)[] = [];
+mixed.push(20);
+mixed.push("ninja");
+// mixed.push(true)
+
+// for variables
+let uid: string | number;
+uid = 123;
+uid = "abc";
+```
+
+### Objects
+
+```
+let ninjaOne: object;
+ninjaOne = {
+	name: "ninja",
+	age: 25,
+};
+ninjaOne = []; // as arrays is a type of object
+
+// for explicitly using for objects we can also use
+
+let ninjaTwo: {
+	name: string;
+	age: number;
+	belt: string;
+};
+
+ninjaTwo = {
+	name: "luigi",
+	age: 25,
+	belt: "black",
+};
 ```

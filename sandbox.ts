@@ -1,47 +1,52 @@
-//arrays
-let names = ["luigi", "mario", "yoshi"];
+// Explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
 
-// names.push("toad");
-// names.push(3);
-// names[0] = 3;
+// age = "luigi";
+age = 30;
 
-let numbers = [10, 20, 30, 40];
-numbers.push(50);
-// numbers.push("zee");
-// number[1] = "zee";
+// isLoggedIn = 25;
+isLoggedIn = false;
 
-let mixed = ["ken", 4, "tory", 5, 6];
+// arrays
+let ninjas: string[];
+// ninjas.push('luigi'); // Cant do this as we haven't initialized it yet with an empty array
 
-mixed.push("ray");
-mixed.push(10);
-mixed[0] = 3;
+// To push an item in it we need to create a new empty array as
+let ninjaArr: string[] = [];
+ninjaArr.push("mario");
+// ninjaArr.push(true);
 
-// objects
-let ninja = {
-	name: "mario", //has to be string always now
-	belt: "black", //has to be string always now
-	age: 25, //has to be number always now
+// Union Types
+
+let mixed: (string | number)[] = [];
+mixed.push(20);
+mixed.push("ninja");
+// mixed.push(true)
+
+// for variables
+let uid: string | number;
+uid = 123;
+uid = "abc";
+
+// Objects
+let ninjaOne: object;
+ninjaOne = {
+	name: "ninja",
+	age: 25,
+};
+ninjaOne = []; // as arrays is a type of object
+
+//for explicitly using for objectys we can also use
+let ninjaTwo: {
+	name: string;
+	age: number;
+	belt: string;
 };
 
-ninja.name = "luigi";
-// ninja.name = 25;
-ninja.belt = "green";
-// ninja.belt = 15;
-ninja.age = 26;
-// ninja.age = "25";
-
-// -----------
-
-// ninja = {
-//     name: "yoshi";
-//     belt: "orange",
-// }
-
-// ninja = {
-//     name: "yoshi";
-//     belt: "orange",
-//     age: 25,
-//     style: [],
-// }
-
-// cant do the above as the initial structure needs to be the same
+ninjaTwo = {
+	name: "luigi",
+	age: 25,
+	belt: "black",
+};
