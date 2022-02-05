@@ -1,21 +1,11 @@
-let greet = () => {
-	console.log("hello world!");
+type StrOrNum = string | number;
+
+const logDetails = (uid: StrOrNum, item: string) => {
+	console.log(`${item} has a uid of ${uid}`);
 };
 
-let fun1: Function;
+type objWithName = { name: string; uid: StrOrNum };
 
-fun1 = () => {
-	console.log("I am a function");
-};
-
-let add = (x: number, y: number) => {
-	console.log(x + y);
-};
-
-let fun2 = (x: number, y: number, z: number | string = 10): void => {
-	console.log(`${x} ${y} ${z}`);
-}; // when not returing anything we can use void
-
-const minus = (x: number, y: number): number => {
-	return x - y;
+const greet = (user: objWithName) => {
+	console.log(`${user.name} says hello!`);
 };
