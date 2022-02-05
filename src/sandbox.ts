@@ -1,17 +1,21 @@
-let age: any = 25;
-age = true;
-console.log(age);
-age = 25;
-console.log(age);
-age = "name";
-console.log(age);
+let greet = () => {
+	console.log("hello world!");
+};
 
-//Array
-let mixed: any[] = [];
-mixed.push(5);
-mixed.push("mario");
-mixed.push(true);
-console.log(mixed);
+let fun1: Function;
 
-//Object
-let ninja: { name: any; age: any };
+fun1 = () => {
+	console.log("I am a function");
+};
+
+let add = (x: number, y: number) => {
+	console.log(x + y);
+};
+
+let fun2 = (x: number, y: number, z: number | string = 10): void => {
+	console.log(`${x} ${y} ${z}`);
+}; // when not returing anything we can use void
+
+const minus = (x: number, y: number): number => {
+	return x - y;
+};
