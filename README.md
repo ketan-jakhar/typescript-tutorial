@@ -206,3 +206,14 @@ console.log(`${ninja.name} is ${ninja.age} years old`);
 };
 
 ```
+
+## DOM and Typecasting
+
+```
+const form = document.querySelector("form")!;
+//treated as HTMLFormElement
+
+const form = document.querySelector(".new-item-form") as HTMLFormElement; //would be treated as HTMLElement without 'as HTMLFormElement'
+```
+
+- value can be use as valueAsNumber/valueAsDate, etc
