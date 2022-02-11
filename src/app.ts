@@ -1,14 +1,24 @@
-// const anchor = document.querySelector("a")!;
+// classes:
+class Invoice {
+	client: string;
+	details: string;
+	amount: number;
 
-// // if (anchor) {
-// // 	console.log(anchor.href);
-// // }
-// console.log(anchor.href);
+	constructor(client: string, details: string, amount: number) {
+		this.client = client;
+		this.details = details;
+		this.amount = amount;
+	}
 
-// const form = document.querySelector("form")!;
+	format() {
+		return `${this.client} owes ₹${this.amount} for ${this.details}`;
+	}
+}
+
+let invoices: Invoice[] = [];
+// invoices.push();
+
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
-
-// console.log(form.children);
 
 //inputs
 const type = document.querySelector("#type") as HTMLSelectElement;

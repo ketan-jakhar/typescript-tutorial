@@ -217,3 +217,7 @@ const form = document.querySelector(".new-item-form") as HTMLFormElement; //woul
 ```
 
 - value can be use as valueAsNumber/valueAsDate, etc
+
+## Classes
+
+Just like normal JS
